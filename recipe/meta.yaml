@@ -42,8 +42,10 @@ test:
     - brax
   commands:
     - pip check
+    - pytest --pyargs brax -v
   requires:
     - pip
+    - pytest
 
 about:
   home: http://github.com/google/brax
