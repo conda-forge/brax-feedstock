@@ -1,5 +1,5 @@
 {% set name = "brax" %}
-{% set version = "0.0.15" %}
+{% set version = "0.0.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/brax-{{ version }}.tar.gz
-  sha256: 9fae266a69282470783fecfc231d0bc91e955df1dcb6f81b36d39cfe703087eb
+  sha256: 5cef88b896eccaec819fd2707591f8c99444c49f911781abd6601af161777928
 
 build:
   noarch: python
