@@ -1,5 +1,5 @@
 {% set name = "brax" %}
-{% set version = "0.0.15" %}
+{% set version = "0.0.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/brax-{{ version }}.tar.gz
-  sha256: 9fae266a69282470783fecfc231d0bc91e955df1dcb6f81b36d39cfe703087eb
+  sha256: 5cef88b896eccaec819fd2707591f8c99444c49f911781abd6601af161777928
 
 build:
   noarch: python
@@ -42,8 +42,19 @@ test:
     - brax
   commands:
     - pip check
+    # The testdata cylinder.stl is not shipped with the source archive,
+    # so we download it manually
+    # See:
+    # * https://github.com/google/brax/blob/v0.0.16/brax/tests/physics_test.py
+    # * https://github.com/abseil/abseil-py/blob/v1.3.0/absl/testing/absltest.py#L156
+    - mkdir -p brax/tests/testdata
+    - wget https://github.com/google/brax/raw/v{{ version }}/brax/tests/testdata/cylinder.stl -O brax/tests/testdata/cylinder.stl
+    - pytest --pyargs brax -v
   requires:
     - pip
+    - pytest
+    - transforms3d
+    - wget
 
 about:
   home: http://github.com/google/brax
