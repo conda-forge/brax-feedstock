@@ -36,6 +36,9 @@ requirements:
     - trimesh
     - typing-extensions
     - grpcio
+    - jaxopt
+    - jinja2
+    - mujoco-python
 
 test:
   imports:
