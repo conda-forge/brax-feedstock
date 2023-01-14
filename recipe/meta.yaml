@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/brax-{{ version }}.tar.gz
   sha256: 0ee1293414418ab4f98b2c7fd23666a2291c0cca226ecbcf8f97adc84e35a132
+  patches:
+    - 292.patch
 
 build:
   noarch: python
