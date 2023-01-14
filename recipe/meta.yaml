@@ -39,6 +39,7 @@ requirements:
     - jaxopt
     - jinja2
     - mujoco-python
+    - etils
 
 test:
   imports:
