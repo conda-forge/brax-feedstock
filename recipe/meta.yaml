@@ -33,9 +33,12 @@ requirements:
     - pytinyrenderer
     - pyyaml >=6.0
     - tensorboardx
-    - trimesh
+    - trimesh==3.9.35
     - typing-extensions
     - grpcio
+    - jaxopt
+    - jinja2
+    - mujoco-python
 
 test:
   imports:
