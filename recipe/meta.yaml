@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/google/brax/archive/refs/tags/v{{ version }}.zip
-  sha256: 0ee1293414418ab4f98b2c7fd23666a2291c0cca226ecbcf8f97adc84e35a132
+  sha256: e3023a329861e0fc1fe37fb75b25ce3cd133bb0c0b4fa53c053563c4b7f9f0ec
   patches:
     - 292.patch
 
