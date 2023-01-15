@@ -1,8 +1,8 @@
-diff --git a/brax/v2/io/__init__.py b/brax/v2/io/__init__.py
+diff --git brax/v2/io/__init__.py brax/v2/io/__init__.py
 new file mode 100644
 index 00000000..7f80a352
 --- /dev/null
-+++ b/brax/v2/io/__init__.py
++++ brax/v2/io/__init__.py
 @@ -0,0 +1,13 @@
 +# Copyright 2022 The Brax Authors.
 +#
