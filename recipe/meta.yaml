@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/brax-{{ version }}.tar.gz
+  url: https://github.com/google/brax/archive/refs/tags/{{ version }}.tar.gz
   sha256: 0ee1293414418ab4f98b2c7fd23666a2291c0cca226ecbcf8f97adc84e35a132
   patches:
     - 292.patch
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   number: 0
 
 requirements:
