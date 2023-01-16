@@ -10,6 +10,7 @@ source:
   sha256: e3023a329861e0fc1fe37fb75b25ce3cd133bb0c0b4fa53c053563c4b7f9f0ec
   patches:
     - 292.patch
+    - 292bis.patch
 
 build:
   noarch: python
