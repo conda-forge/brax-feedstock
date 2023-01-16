@@ -1,0 +1,7 @@
+diff --git MANIFEST.in MANIFEST.in
+new file mode 100644
+index 00000000..e338ec6f
+--- /dev/null
++++ MANIFEST.in
+@@ -0,0 +1 @@
++include brax/v2/envs/assets/*.xml
