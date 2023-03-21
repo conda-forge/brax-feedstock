@@ -36,7 +36,7 @@ requirements:
     - pytinyrenderer
     - pyyaml >=6.0
     - tensorboardx
-    - trimesh
+    - trimesh==3.9.35
     - typing-extensions
     - grpcio
     - jaxopt
@@ -48,7 +48,7 @@ test:
   imports:
     - brax
   commands:
-    # - pip check
+    - pip check
     # The testdata cylinder.stl is not shipped with the source archive,
     # so we download it manually
     # See:
