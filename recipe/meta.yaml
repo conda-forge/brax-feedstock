@@ -36,7 +36,7 @@ requirements:
     - pytinyrenderer
     - pyyaml >=6.0
     - tensorboardx
-    - trimesh==3.9.35
+    - trimesh ==3.9.35
     - typing-extensions
     - grpcio
     - jaxopt
