@@ -29,6 +29,7 @@ requirements:
     - dm-env
     - flax
     - gym
+    - importlib_resources
     - numpy
     - optax
     - pillow
