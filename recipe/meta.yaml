@@ -24,6 +24,8 @@ requirements:
     - absl-py
     - dataclasses
     - dm-env
+    - flask
+    - flask-cors
     - flax
     - gym
     - numpy
@@ -33,7 +35,7 @@ requirements:
     - pytinyrenderer
     - pyyaml >=6.0
     - tensorboardx
-    - trimesh
+    - trimesh ==3.9.35
     - typing-extensions
     - grpcio
     - jaxopt
