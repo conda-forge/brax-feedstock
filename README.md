@@ -1,11 +1,11 @@
-About brax
-==========
+About brax-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/brax-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/google/brax
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/brax-feedstock/blob/main/LICENSE.txt)
 
 Summary: A differentiable physics engine written in JAX.
 
