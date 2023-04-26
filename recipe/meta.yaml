@@ -56,12 +56,8 @@ test:
     # See:
     # * https://github.com/google/brax/blob/v0.0.16/brax/tests/physics_test.py
     # * https://github.com/abseil/abseil-py/blob/v1.3.0/absl/testing/absltest.py#L156
-    - mkdir -p brax/tests/testdata
-    - wget https://github.com/google/brax/raw/v{{ version }}/brax/tests/testdata/cylinder.stl -O brax/tests/testdata/cylinder.stl
-    # Also all the files in brax/v2/test_data are required by the tests and not installed by the installation directories
-    - git clone -b v{{ version }} https://github.com/google/brax brax-src
-    - cp -r ./brax-src/brax/v2/test_data/ `python -c 'import site; print(site.getsitepackages()[0])'`/brax/v2/test_data
-    - rm -rf brax-src
+    - mkdir -p brax/v1/tests/testdata
+    - wget https://github.com/google/brax/raw/v{{ version }}/brax/v1/tests/testdata/cylinder.stl -O brax/v1/tests/testdata/cylinder.stl
     - pytest --pyargs brax -v
   requires:
     - pip
