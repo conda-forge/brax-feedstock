@@ -1,12 +1,11 @@
 diff --git a/MANIFEST.in b/MANIFEST.in
-index dc3a643d..132681a3 100644
+index 3d271e88..d82985f0 100644
 --- a/MANIFEST.in
 +++ b/MANIFEST.in
-@@ -1,4 +1,4 @@
- include brax/tests/testdata/cylinder.stl
- include brax/v2/envs/assets/*.xml
--recursive-include brax/v2/test_data *.xml *.stl *.obj
--recursive-include brax/v2/visualizer *
+@@ -1,3 +1,3 @@
+ include brax/envs/assets/*.xml
+-recursive-include brax/test_data *.xml *.stl *.obj
+-recursive-include brax/visualizer *
 \ No newline at end of file
-+recursive-include brax/v2/test_data *.xml *.stl *.obj *.urdf
-+recursive-include brax/v2/visualizer *
++recursive-include brax/test_data *.xml *.stl *.obj *.urdf
++recursive-include brax/visualizer *
