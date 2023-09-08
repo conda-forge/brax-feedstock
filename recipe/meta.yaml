@@ -1,5 +1,5 @@
 {% set name = "brax" %}
-{% set version = "0.1.2" %}
+{% set version = "0.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/google/brax/archive/refs/tags/v{{ version }}.zip
-  sha256: af50dbbb387df4fe3c1ddee99f506e554db385fac646a5c7d8de2a7bcc602d20
+  sha256: 06bbb954f1b49a2867d9c89b12d9d65d912bfd62cbf8323638e7f6e3055950e1
   patches:
     - fix_assets_urdf.patch
 
