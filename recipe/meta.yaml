@@ -1,5 +1,5 @@
 {% set name = "brax" %}
-{% set version = "0.1.2" %}
+{% set version = "0.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://github.com/google/brax/archive/refs/tags/v{{ version }}.zip
-  sha256: af50dbbb387df4fe3c1ddee99f506e554db385fac646a5c7d8de2a7bcc602d20
-  patches:
-    - fix_assets_urdf.patch
+  sha256: 785d8d920d4201e03fa582ae507e7fe4732ab3e5b01d79186426a55dd1156f88
 
 build:
   noarch: python
@@ -21,8 +19,8 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - jaxlib >=0.3.7
-    - jax
+    - jaxlib >=0.4.6
+    - jax >=0.4.6
     - absl-py
     - dataclasses
     - dm-env
@@ -31,13 +29,15 @@ requirements:
     - flax
     - gym
     - numpy
+    - ml-collections
     - optax
     - pillow
     - python >=3.7
     - pytinyrenderer
     - pyyaml >=6.0
+    - scipy
     - tensorboardx
-    - trimesh ==3.9.35
+    - trimesh
     - typing-extensions
     - grpcio
     - jaxopt
