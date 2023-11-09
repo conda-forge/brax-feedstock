@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/google/brax/archive/refs/tags/v{{ version }}.zip
   sha256: 785d8d920d4201e03fa582ae507e7fe4732ab3e5b01d79186426a55dd1156f88
-  patches:
-    - fix_assets_urdf.patch
 
 build:
   noarch: python
