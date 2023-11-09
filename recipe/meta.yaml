@@ -19,8 +19,8 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - jaxlib >=0.3.7
-    - jax
+    - jaxlib >=0.4.6
+    - jax >=0.4.6
     - absl-py
     - dataclasses
     - dm-env
@@ -29,13 +29,15 @@ requirements:
     - flax
     - gym
     - numpy
+    - ml-collections
     - optax
     - pillow
     - python >=3.7
     - pytinyrenderer
     - pyyaml >=6.0
+    - scipy
     - tensorboardx
-    - trimesh ==3.9.35
+    - trimesh
     - typing-extensions
     - grpcio
     - jaxopt
