@@ -43,6 +43,7 @@ requirements:
     - jaxopt
     - jinja2
     - mujoco-python
+    - mujoco-mjx
     - etils
     - importlib_resources
 
