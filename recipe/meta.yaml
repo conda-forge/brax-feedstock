@@ -1,5 +1,5 @@
 {% set name = "brax" %}
-{% set version = "0.10.2" %}
+{% set version = "0.10.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/google/brax/archive/refs/tags/v{{ version }}.zip
-  sha256: b0dd51689fcb8a92c99e3fda9aa46307cf9884b28a8ba78231e956ad145ec141
+  sha256: 5e86d8b0a182613283fd5e36892f76224ab20687b32a80c9a87aafedfe323461
 
 build:
   noarch: python
