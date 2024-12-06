@@ -11,13 +11,14 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   number: 0
 
 requirements:
   host:
+    - setuptools
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - jaxlib >=0.4.6
     - jax >=0.4.6
@@ -32,7 +33,7 @@ requirements:
     - ml-collections
     - optax
     - pillow
-    - python >=3.7
+    - python >={{ python_min }}
     - pytinyrenderer
     - pyyaml >=6.0
     - scipy
@@ -62,6 +63,7 @@ test:
     # Skipping a few tests as a workaround for https://github.com/conda-forge/brax-feedstock/pull/11#issuecomment-1934257371
     - pytest --pyargs brax -v -k "test_forward2"
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
     - transforms3d
