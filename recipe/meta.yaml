@@ -23,7 +23,6 @@ requirements:
     - jaxlib >=0.4.6
     - jax >=0.4.6
     - absl-py
-    - dataclasses
     - dm-env
     - flask
     - flask-cors
