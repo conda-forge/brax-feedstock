@@ -34,7 +34,7 @@ requirements:
     - numpy
     - ml-collections
     - optax
-    - orbax-checkpoint
+    - orbax-checkpoint >=0.11.22
     - pillow
     - python >={{ python_min }}
     - pytinyrenderer
