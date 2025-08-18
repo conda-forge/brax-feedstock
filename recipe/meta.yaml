@@ -1,5 +1,5 @@
 {% set name = "brax" %}
-{% set version = "0.12.3" %}
+{% set version = "0.12.4" %}
 # See https://github.com/conda-forge/brax-feedstock/pull/23#issuecomment-3195617254
 # Remove once conda-forge itself sets python_min to 3.10
 {% set python_min = "3.10" %}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/google/brax/archive/refs/tags/v{{ version }}.zip
-  sha256: 06bfd66fbbf55320dd9aa286c2e3d9abf15b4a1cd62883b76d1a486d123181dd
+  sha256: 6c91d50695ddb305fd6829cbc7f6cd88799354c55cfe13806141208aa5bb66de
 
 build:
   noarch: python
@@ -55,14 +55,7 @@ test:
     - brax
   commands:
     - pip check
-    # The testdata cylinder.stl is not shipped with the source archive,
-    # so we download it manually
-    # See:
-    # * https://github.com/google/brax/blob/v0.0.16/brax/tests/physics_test.py
-    # * https://github.com/abseil/abseil-py/blob/v1.3.0/absl/testing/absltest.py#L156
-    - mkdir -p brax/v1/tests/testdata
-    - wget https://github.com/google/brax/raw/v{{ version }}/brax/v1/tests/testdata/cylinder.stl -O brax/v1/tests/testdata/cylinder.stl
-    # Skipping a few tests as a workaround for https://github.com/conda-forge/brax-feedstock/pull/11#issuecomment-1934257371
+    # Running only a few tests as a workaround for https://github.com/conda-forge/brax-feedstock/pull/11#issuecomment-1934257371
     - pytest --pyargs brax -v -k "test_forward2"
   requires:
     - python {{ python_min }}
