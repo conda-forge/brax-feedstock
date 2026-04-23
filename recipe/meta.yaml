@@ -1,5 +1,5 @@
 {% set name = "brax" %}
-{% set version = "0.12.5" %}
+{% set version = "0.14.1" %}
 # See https://github.com/conda-forge/brax-feedstock/pull/23#issuecomment-3195617254
 # Remove once conda-forge itself sets python_min to 3.10
 {% set python_min = "3.10" %}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/google/brax/archive/refs/tags/v{{ version }}.zip
-  sha256: 0e4777805734cfbe1bcbd6815cae249baf1efbec5b93d3a7cc6a57539c00a45e
+  sha256: d8a6760364e3e809318f073cbc06505bc06cb8ae138bf18dbf5e823c3ed07d1e
 
 build:
   noarch: python
